@@ -58,6 +58,11 @@
     font-size: 4rem;
 }
 
+/* Text align */
+.text-center {
+    text-align: center;
+}
+
 /* Backgrounds & colored buttons */
 .bg-primary, .btn-primary {
     background-color: var(--primary-color);
