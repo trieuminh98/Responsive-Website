@@ -102,6 +102,7 @@ img {
     width: 400px;
     padding: 40px;
     z-index: 100;
+    animation: slideFromRight 1s ease-in;
 }
 
 .showcase-form  .form-control {
@@ -132,10 +133,15 @@ img {
     font-size: 16px;
 }
 
+.showcase-text {
+    animation: slideFromLeft 1s ease-in;
+}
+
 /* Stats */
 .stats {
     position: relative;
     top: 50px;
+    animation: slideFromBottom 1s ease-in;
 }
 
 .stats-heading {
@@ -252,6 +258,44 @@ code, pre {
     margin: 0 10px;
 }
 
+/* Animations */
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
 /* Tablet and under */
 @media(max-width: 768px) {
     .grid,
@@ -273,9 +317,16 @@ code, pre {
         height: auto;
     }
 
+    .showcase-text {
+        text-align: center;
+        margin-top: 40px;
+        animation: slideFromTop 1s ease-in;
+    }
+
     .showcase-form {
         justify-self: center;
         margin: auto;
+        animation: slideFromBottom 1s ease-in;
     }
 
     .stats {
